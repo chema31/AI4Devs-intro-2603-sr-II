@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse string de Chema</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Ubuntu,
+          Cantarell,
+          Noto Sans,
+          sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 32px 16px;
+        display: grid;
+        place-items: start center;
+      }
+      main {
+        width: min(720px, 100%);
+        display: grid;
+        gap: 12px;
+      }
+      label {
+        font-weight: 600;
+      }
+      input {
+        padding: 10px 12px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        align-items: end;
+      }
+      button {
+        padding: 10px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+      output {
+        padding: 12px;
+        border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+        border-radius: 8px;
+        min-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Reverse string de Chema</h1>
+      <div class="row">
+        <div>
+          <label for="text-input">Texto</label>
+          <input
+            id="text-input"
+            name="text"
+            type="text"
+            autocomplete="off"
+            placeholder="Ej: AI4Devs"
+          />
+        </div>
+        <button id="reverse-btn" type="button" disabled>Invertir</button>
+      </div>
+      <output id="result" aria-live="polite"></output>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
